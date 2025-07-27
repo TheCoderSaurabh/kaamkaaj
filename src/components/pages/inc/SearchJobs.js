@@ -115,10 +115,7 @@ const SearchJobs = () => {
   const [filteredJobs, setFilteredJobs] = useState(jobs);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      handleSearch();
-    }, 500);
-    return () => clearTimeout(timer);
+    handleSearch();
   }, [searchKey]);
 
   const handleSearch = () => {

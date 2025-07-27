@@ -87,10 +87,7 @@ function SearchServices() {
   const [filteredServices, setFilteredServices] = useState(services);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      handleSearch();
-    }, 500);
-    return () => clearTimeout(timer);
+    handleSearch();
   }, [searchKey]);
 
   const handleSearch = () => {
